@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Macondo&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+@theme{
+  --color-light-green: #7aff7a;
+  --color-dark-green: #36bf36;
+  --color-light-dark: #778888;
+  --color-light-dark-para: #888;
+  --font-grosteque: "Darker Grotesque", sans-serif;
+  --lg-scr-horizontal-space: 12%;
+}
+
+
+/* HEADER Utility Classes */
+
+.headerLinks{
+  @apply font-grosteque font-bold text-[18px] text-white inline-block hover:text-light-green transition-colors duration-300 ease-linear;
+}
+.headerSocialIcons{
+  @apply  fill-amber-50 active:fill-light-green hover:fill-light-green inline-block;
+}
+.socialIcon{
+  @apply h-5 w-5;
+}
+
+/* END */
+
+/* Hero Styles Starting from Here */
+
+.featureContainer{
+  @apply font-grosteque font-bold flex min-h-6 min-w-20 max-w-fit gap-x-3 transition-colors duration-300 ease-linear cursor-pointer hover:text-light-green items-center rounded-4xl py-2 px-3 bg-[#22222285] ;
+}
+.featureContainerType1{
+  @apply fill-white  hover:fill-light-green;
+}
+.featureContainerType2{
+  @apply  hover:stroke-light-green stroke-white fill-none ;
+}
+.heroFeatureIconLink{
+  @apply h-5 w-5;
+}
+.heroIcon{
+  @apply h-5 w-5;
+}
+
+/* All Buttons Custom Class */
+
+.btnTextBlock{
+  @apply absolute top-[29%] block;
+}
+.btnTextBlockType1{
+  @apply absolute top-[42%] block;
+}
+
+/* END */
+
+.svg-starter{
+ @apply transition-colors duration-200 h-[70px] w-[70px] rounded-4xl group-hover:bg-[#7aff7a] bg-[#020202]/50 stroke-1 p-5;
+}
+.svg-container{
+  @apply fill-[#7aff7a] group-hover:fill-black z-10 inline-block;
+}
+.svg-type-2-container{
+  @apply inline-block transition duration-200 ease-linear group-hover:stroke-[black]  stroke-[#7aff7a] fill-[none] h-[70px] w-[70px];
+}
+.svg-type-2-starter{
+  @apply h-[70px] w-[70px] bg-black/50 group-hover:bg-[#7aff7a] p-5 rounded-4xl;
+}
+.feature-card-img{
+  @apply z-20 absolute top-0;
+}
+.feature-card-details{
+ @apply relative z-40 max-w-[500px];
+}
+.landScapeContainer{
+  @apply flex flex-col h-full justify-between;
+}
+.landScapeImage{
+  @apply -right-30 top-0 sm:right-0 sm:-top-[3%] h-3/4 sm:h-full z-20 absolute group-hover:top-0 duration-500 transition-all ease-linear group-hover:-right-[2%];
+}
+.para-text{
+  @apply text-[#9999] font-grosteque text-sm sm:text-xl;
+}
+.normalHeading{
+  @apply text-2xl sm:text-3xl font-bold;
+}
+.featureBoxContainer{
+  @apply flex flex-col justify-between h-full;
+}
+.featureLongImage{
+  @apply absolute top-[5%] h-full max-w-11/12 -translate-x-1/2 lg:-translate-x-0 left-[50%] lg:left-[8%] group-hover:-top-[5%] transition-all duration-600 ease-linear;
+}
+.bottomShadow{
+  @apply z-30 absolute bottom-0 h-full opacity-80 object-cover w-full left-0;
+}
+
+.featureLongContainer .feature-card-details{
+  position: absolute;
+  bottom: 3%;
+  left: 8%;
+}
+.featureLongContainer .feature-card-details::before{
+  content: '';
+  height: 500px;
+  min-width: 1000px;
+  position: absolute;
+  left: -10%;
+  z-index: -1;
+  bottom: -40%;
+  background: linear-gradient(0deg, #111 35%, #1110);
+}
+/* page-3-styles */
+.page-3-details-container-type-2{
+  @apply max-w-[650px] z-10 absolute top-0 h-full w-3/4 left-10;
+}
+.page-3-single-feature-container-type-2{
+  @apply flex items-start  relative min-h-[150vh] -mt-[35%] px-[2.5%];
+}
+.page-3-feature-title{
+  @apply  text-light-green my-4 font-medium;
+}
+.page-3-feature-subtitle{
+  @apply md:text-5xl text-3xl my-4 md:leading-14 font-bold;
+}
+.page-3-feature-description{
+  @apply text-light-dark text-lg font-medium;
+}
+.page-3-type-2-images{
+  @apply  opacity-0  sticky top-[15%]  h-[500px] object-contain scale-[2] -mt-[30%] w-1/2 left-[130%];
+}
+
+
+/* Page3 Mobile Version Styles */
+
+.swiper{
+  .swiper-pagination-bullets{
+
+  @apply left-0 top-0 translate-x-[160%] md:translate-x-[350%];
+
+  .swiper-pagination-bullet-active{
+  @apply bg-light-green;
+}
+}
+.sliderImageType2{
+  @apply max-h-[800px] w-full min-h-[800px] min-w-[800px] left-1/2 -translate-x-[53%] -top-3/4 absolute  md:w-3/4 mx-auto;
+}
+.swiper-slide{  
+  p{
+    @apply max-w-[450px] mx-auto;
+  }
+  .sm-page-3-details{
+    @apply  w-full md:max-w-[600px] max-w-[300px] mx-auto h-1/2 absolute -bottom-[10%] md:-bottom-[2%] left-1/2  -translate-x-1/2 text-center;
+  }
+   .sm-page-3-detailsType2{
+    @apply  w-full max-w-[600px] mx-auto px-10 h-1/2 md:translate-y-[95%] translate-y-[80%] text-center;
+  }
+  .sliderImage{
+    @apply md:translate-y-[-15%] translate-y-[-15%] xl:translate-y-0;
+  }
+}
+}
+
+@media screen and (max-width: 550px){
+  .swiper-slide[data-swiper-slide-index="3"] .sm-page-3-detailsType2{
+  transform: translateY(-15%);
+}
+  .swiper-slide[data-swiper-slide-index="1"] .sliderImageType2{
+  /* transform: translateY(15%); */
+  top: -90%;
+}
+}
+
+/* How Does it Works Styles */
+
+.roundIconContainer{
+  @apply min-h-[70px] max-w-[70px] cursor-pointer flex justify-center items-center ease-linear duration-300 transition-colors group-hover:bg-light-green bg-light-dark-para/10 rounded-[50%];
+}
+
+/* TimeLine Styles */
+
+.TimeLineQuestion{
+  @apply text-[20px] p-2 mb-6 -ml-6 py-0 w-fit rounded-[50%] bg-[#090a0a] inline-block text-light-green overflow-hidden hover:text-black before:content-[''] before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 before:rounded-[50%] before:w-0 before:h-0 hover:before:w-full hover:before:h-full before:bg-light-green before:z-[-1] z-10 relative before:transition-all before:duration-300 before:ease-in-out transition-colors duration-300 ease-in-out cursor-pointer;
+}
+
+.TimeLineContainer ul{
+  @apply list-disc leading-10 text-lg text-light-dark-para;
+}
+.TimeLineContainer div{
+  @apply px-6 z-10;
+}
+
+@layer base{
+  h2{
+    @apply font-grosteque  lg:text-5xl text-[40px] block font-extrabold leading-10 py-3 xl:py-4;
+  }
+  h4{
+    @apply font-grosteque text-xl font-bold text-light-green;
+  }
+  a{
+    @apply font-grosteque;
+  }
+  p{
+    @apply font-grosteque text-xl my-2;
+  }
+}

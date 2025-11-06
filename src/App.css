@@ -49,7 +49,7 @@
   @apply absolute top-[29%] block;
 }
 .btnTextBlockType1{
-  @apply absolute top-[42%] block;
+  @apply absolute top-[42%] max-sm:top-[33%] block;
 }
 
 /* END */

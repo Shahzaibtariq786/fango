@@ -9,7 +9,7 @@ import LongBottomShadow from "/src/assets/long_shadow.png";
 import Banner from "/src/components/footerBanner.jsx"
 const Footer = () => {
   return (
-    <footer id='footer' className="2xl:px-[var(--lg-scr-horizontal-space)] caret-transparent min-h-[90vh] min-md:min-h-[75vh] overflow-x-hidden min-xl:min-h-[120vh] w-full bg-top bg-no-repeat relative overflow-y-hidden bg-cover" style={{backgroundImage: `url(${FooterBg})`}}>
+    <footer id='footer' className="2xl:px-[var(--lg-scr-horizontal-space)] caret-transparent min-h-[90vh] max-sm:min-h-[100vh] min-md:min-h-[75vh] overflow-x-hidden min-xl:min-h-[120vh] w-full bg-top bg-no-repeat relative overflow-y-hidden bg-cover" style={{backgroundImage: `url(${FooterBg})`}}>
         <h2 className='text-white font-extrabold text-center my-4'>Coming Soon</h2>
         <div id="app_icons_container" className='grid grid-row-2 items-center justify-items-center max-sm:min-h-[25vh]  sm:flex gap-x-5 md:items-center md:justify-center w-full'>
             <a href="#" className='hover:-translate-y-2 transition-all duration-300 ease-in-out'><img src={AppStoreIcon} alt="App Store Icon" /></a>
